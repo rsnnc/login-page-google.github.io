@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Inter;
+}
+
+$color: black;
+$bold: 700;
+$regular: 400;
+
+body {
+    background-color: white;
+}
+
+header {
+    font-size: 20px;
+    font-weight: $bold;
+    color: $color;
+    .logo {
+        text-align: left;
+        padding: 24px;
+    }
+}
+
+section {
+    max-height: 1080px;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 174px;
+    .hero {
+        .title {
+            font-size: 24px;
+            font-weight: $bold;
+            color: $color;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            font-weight: $regular;
+            color: $color;
+            margin-bottom: 24px;
+        }
+    }
+    .signup {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &__input {
+            text-align: left;
+            color: $color;
+            font-size: 18px;
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1.5px solid #828282;
+        }
+        &__input::placeholder {
+            color: #828282;
+        }
+        &__button {
+            margin-bottom: 12px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid green;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: $color;
+            color: white;
+        }
+        &__choice {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 400;
+            color: #828282;
+            position: relative;
+            margin: 24px 0;
+        }
+        &__choice::before {
+            content: "";
+            width: 30%;
+            border: 1px solid #E6E6E6;
+            display: inline-block;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+        &__choice::after {
+            content: "";
+            width: 30%;
+            border: 1px solid #E6E6E6;
+            display: inline-block;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+    }
+    .google {
+        &__button {
+            display: flex;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #EEEEEE;
+            font-size: 18px;
+            font-weight: $bold;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: #EEEEEE;
+            color: $color;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 24px;
+        }
+        &__icon {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 12px 12px;
+        }
+        &__text {
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}
